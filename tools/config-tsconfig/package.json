@@ -1,0 +1,12 @@
+{
+  "name": "@tools/config-tsconfig",
+  "version": "0.1.0",
+  "description": "TypeScript configuration for the monorepo",
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

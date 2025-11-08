@@ -1,0 +1,23 @@
+$schema: "https://moonrepo.dev/schemas/project.json"
+# https://moonrepo.dev/docs/config/project
+
+platform: node
+language: javascript
+id: config-eslint
+
+tasks:
+  fix:
+    deps:
+      - "config-eslint:fix-lint"
+
+  fix-lint:
+    description: "Fix linting issues with ESLint"
+    script: "eslint --max-warnings=0 . --fix"
+
+  check:
+    deps:
+      - "config-eslint:check-lint"
+
+  check-lint:
+    description: "Check for linting issues with ESLint"
+    script: "eslint --max-warnings=0 ."

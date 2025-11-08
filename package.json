@@ -3,14 +3,24 @@
   "private": true,
   "keywords": [],
   "license": "MIT",
+  "type": "module",
   "author": {
     "name": "Steven Jimenez",
     "email": "stevenmjimenez@gmail.com"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "tools/*"
   ],
+  "scripts": {
+    "check": "moon :check",
+    "fix": "moon :fix",
+    "build": "moon :build",
+    "prepare": "husky"
+  },
   "devDependencies": {
-    "@moonrepo/cli": "^1.41.6"
+    "@moonrepo/cli": "^1.41.6",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2"
   }
 }
