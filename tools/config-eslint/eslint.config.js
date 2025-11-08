@@ -16,14 +16,14 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   {
-    files: ["**/*.json"],
+        files: ["**/*.json"],
     plugins: { json },
     language: "json/json",
     extends: ["json/recommended"],
-      ignores: ["**/package-lock.json"],
+    ignores: ["**/package-lock.json", "**/tsconfig.*.json", "**/tsconfig.json"],
   },
   {
-    files: ["**/*.jsonc"],
+    files: ["**/*.jsonc", "**/*.tsconfig.*.json", "**/tsconfig.json"],
     plugins: { json },
     language: "json/jsonc",
     extends: ["json/recommended"],
