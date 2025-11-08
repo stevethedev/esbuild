@@ -5,7 +5,7 @@ import json from "@eslint/json";
 import markdown from "@eslint/markdown";
 import css from "@eslint/css";
 import { defineConfig } from "eslint/config";
-import eslintPluginPrettier from "eslint-config-prettier/flat";
+import eslintPluginPrettier from "eslint-config-prettier";
 
 export default defineConfig([
   {
