@@ -1,0 +1,20 @@
+{
+  "name": "@tools/config-eslint",
+  "version": "0.1.0",
+  "description": "ESLint configuration for the monorepo",
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.1",
+    "@eslint/json": "^0.14.0",
+    "@eslint/markdown": "^7.5.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^14.0.0",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.46.3"
+  }
+}

@@ -1,5 +1,7 @@
+$schema: "https://moonrepo.dev/schemas/workspace.json"
 # https://moonrepo.dev/docs/config/workspace
-$schema: 'https://moonrepo.dev/schemas/workspace.json'
 
 projects:
-  - 'packages/*'
+  - "."
+  - "packages/*"
+  - "tools/*"

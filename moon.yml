@@ -1,0 +1,34 @@
+$schema: "https://moonrepo.dev/schemas/project.json"
+# https://moonrepo.dev/docs/config/project
+
+platform: node
+language: javascript
+
+tasks:
+  fix:
+    deps:
+      - "fix-format"
+      - "fix-lint"
+
+  fix-format:
+    platform: "node"
+    description: "Fix code formatting with Prettier"
+    script: "prettier --write ."
+
+  fix-lint:
+    description: "Fix linting issues with ESLint"
+    script: "eslint --max-warnings=0 . --fix"
+
+  check:
+    deps:
+      - "check-format"
+      - "check-lint"
+
+  check-format:
+    platform: "node"
+    description: "Check code formatting with Prettier"
+    script: "prettier --check ."
+
+  check-lint:
+    description: "Check for linting issues with ESLint"
+    script: "eslint --max-warnings=0 ."
