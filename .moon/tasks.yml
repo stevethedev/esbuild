@@ -1,0 +1,34 @@
+# tools/config-eslint/moon.yml
+$schema: "https://moonrepo.dev/schemas/tasks.json"
+
+tasks:
+  fix:
+    options:
+      runDepsInParallel: false
+    deps:
+      - "~:fix-format"
+      - "~:fix-lint"
+
+  fix-format:
+    platform: "node"
+    description: "Fix code formatting with Prettier"
+    script: "prettier --write ."
+
+  fix-lint:
+    description: "Fix linting issues with ESLint"
+    script: "eslint --max-warnings=0 . --fix"
+
+  check:
+    deps:
+      - "~:check-lint"
+      - "~:check-format"
+      - "config-eslint:check-lint"
+
+  check-format:
+    platform: "node"
+    description: "Check code formatting with Prettier"
+    script: "prettier --check ."
+
+  check-lint:
+    description: "Check for linting issues with ESLint"
+    script: "eslint --max-warnings=0 ."
