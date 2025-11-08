@@ -3,11 +3,12 @@ $schema: "https://moonrepo.dev/schemas/project.json"
 
 platform: node
 language: javascript
+id: config-eslint
 
 tasks:
   fix:
     deps:
-      - "fix-lint"
+      - "config-eslint:fix-lint"
 
   fix-lint:
     description: "Fix linting issues with ESLint"
@@ -15,7 +16,7 @@ tasks:
 
   check:
     deps:
-      - "check-lint"
+      - "config-eslint:check-lint"
 
   check-lint:
     description: "Check for linting issues with ESLint"

@@ -1,8 +1,5 @@
-$schema: "https://moonrepo.dev/schemas/project.json"
-# https://moonrepo.dev/docs/config/project
-
-platform: node
-language: javascript
+# tools/config-eslint/moon.yml
+$schema: "https://moonrepo.dev/schemas/tasks.json"
 
 tasks:
   fix:
@@ -23,8 +20,9 @@ tasks:
 
   check:
     deps:
-      - "~:check-format"
       - "~:check-lint"
+      - "~:check-format"
+      - "config-eslint:check-lint"
 
   check-format:
     platform: "node"

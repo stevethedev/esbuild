@@ -2,6 +2,6 @@ $schema: "https://moonrepo.dev/schemas/workspace.json"
 # https://moonrepo.dev/docs/config/workspace
 
 projects:
-  - "."
-  - "packages/*"
-  - "tools/*"
+  package: "."
+  config-eslint: "tools/config-eslint"
+  config-tsconfig: "tools/config-tsconfig"
