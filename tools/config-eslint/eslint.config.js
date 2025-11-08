@@ -9,10 +9,12 @@ import eslintPluginPrettier from "eslint-config-prettier";
 
 export default defineConfig([
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    ...js.configs.recommended,
     plugins: { js },
-    extends: ["js/recommended"],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    languageOptions: {
+      ...js.configs.recommended.languageOptions,
+      globals: { ...globals.browser, ...globals.node }
+    },
   },
   tseslint.configs.recommended,
   {
